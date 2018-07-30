@@ -1,0 +1,6 @@
+language: java
+jdk:
+- oraclejdk8
+before_install:
+- git clone https://github.com/raulhsj/DataSourceStubWS.git /tmp/datasourcestubws
+- mvn -f /tmp/datasourcestubws/ install
