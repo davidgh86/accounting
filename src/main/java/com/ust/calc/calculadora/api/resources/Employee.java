@@ -47,5 +47,7 @@ public class Employee {
     
 	@NotNull(message="The contract is required")
     private Contract contract;
+	
+	private String cadastreRef;
 
 }

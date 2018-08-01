@@ -17,7 +17,7 @@ public class DataToEmployeeDSConverter implements Converter<Data, EmployeeDS> {
 				data.getCtacte(), data.getEstadocivil(), data.getSexo(),
 				data.getFecalta(), data.getCategoria(),
 				data.getTipocontrato(), data.getNsegsoc(),
-				data.getNumtel(), data.getFecbaja());
+				data.getNumtel(), data.getFecbaja(),null);
 		return employeeDS;
 	}
 	

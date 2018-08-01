@@ -21,6 +21,7 @@ public class DataProviderToEmployeeConverter implements Converter<Data, Employee
 				.phoneNumber(data.getNumtel())
 				.sex(data.getSexo())
 				.id(data.getId())
+				.cadastreRef(data.getRefCatastro())
 				.build();
 	}
 

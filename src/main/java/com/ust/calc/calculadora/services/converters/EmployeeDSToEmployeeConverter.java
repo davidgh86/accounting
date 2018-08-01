@@ -15,7 +15,7 @@ public class EmployeeDSToEmployeeConverter implements Converter<EmployeeDS, Empl
 	public Employee convert(EmployeeDS employeeDS) {
 		
 		Contract contract = new Contract(employeeDS.getCategoria(),employeeDS.getTipocontrato(),employeeDS.getFecalta(),employeeDS.getSalary(),employeeDS.getCurrency(),employeeDS.getFecbaja(),employeeDS.getNsegsoc(),employeeDS.getEstadocivil(),employeeDS.getCtacte());
-		Employee employee = new Employee(employeeDS.getName(),employeeDS.getDireccion(),employeeDS.getEmail(),employeeDS.getDni(),null,employeeDS.getNumtel(),employeeDS.getSexo(),employeeDS.getId(),contract);
+		Employee employee = new Employee(employeeDS.getName(),employeeDS.getDireccion(),employeeDS.getEmail(),employeeDS.getDni(),null,employeeDS.getNumtel(),employeeDS.getSexo(),employeeDS.getId(),contract,employeeDS.getCatastroRef());
 		
 		return employee;
 	}
