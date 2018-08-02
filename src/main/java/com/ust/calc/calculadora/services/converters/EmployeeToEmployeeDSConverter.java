@@ -17,7 +17,7 @@ public class EmployeeToEmployeeDSConverter implements Converter<Employee, Employ
 				employee.getContract().getCurrentAccount(), employee.getContract().getCivilStatus(), employee.getSex(),
 				employee.getContract().getStartDate(), employee.getContract().getCategory(),
 				employee.getContract().getContractType(), employee.getContract().getInsuranceNumber(),
-				employee.getPhoneNumber(), employee.getContract().getEndDate());
+				employee.getPhoneNumber(), employee.getContract().getEndDate(), employee.getRefCatastro());
 
 		return employeeDS;
 	}

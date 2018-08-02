@@ -7,14 +7,14 @@ import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
 import com.ust.calc.calculadora.clients.entity.EmployeeDS;
-import com.ust.calc.calculadora.datasource.api.Data;
+import com.ust.calc.calculadora.wsdlstub.Data;
 
 @RunWith(JUnit4.class)
 public class DataToEmployeeDSConverterTest {
 
 	@Test
 	public void test() {
-		Data input = new Data("", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "");
+		Data input = new Data("", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "");
 		EmployeeDS output = new DataToEmployeeDSConverter().convert(input);
 		assertThat(output).isNotNull();
     	assertThat(output.getName()).isEqualTo("");

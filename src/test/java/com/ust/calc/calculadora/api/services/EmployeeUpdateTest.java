@@ -2,7 +2,7 @@ package com.ust.calc.calculadora.api.services;
 
 import com.ust.calc.calculadora.api.resources.Employee;
 import com.ust.calc.calculadora.api.services.impl.EmployeeUpdateServiceImpl;
-import com.ust.calc.calculadora.clients.DataSourceWSClientUpdate;
+import com.ust.calc.calculadora.clients.DataSourceWSStubModifications;
 import com.ust.calc.calculadora.clients.entity.EmployeeDS;
 import com.ust.calc.calculadora.clients.integration.IntegrationDSClientUpdate;
 import com.ust.calc.calculadora.services.converters.EmployeeDSToEmployeeConverter;
@@ -26,7 +26,7 @@ public class EmployeeUpdateTest {
     private IntegrationDSClientUpdate integrationDSClientUpdate;
 
     @Mock
-    private DataSourceWSClientUpdate dataSourceWSClientUpdate;
+    private DataSourceWSStubModifications dataSourceWSClientUpdate;
 
     @Mock
     private EmployeeToEmployeeDSConverter converterEmployeeToEmployeeDS;

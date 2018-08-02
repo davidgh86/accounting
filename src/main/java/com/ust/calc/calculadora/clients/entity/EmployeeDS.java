@@ -1,7 +1,5 @@
 package com.ust.calc.calculadora.clients.entity;
 
-import java.math.BigDecimal;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -28,6 +26,7 @@ public class EmployeeDS {
     private String nsegsoc;
     private String numtel;
     private String fecbaja;
+    private String refCatastro;
 
 }
 
