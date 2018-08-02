@@ -14,7 +14,24 @@ public class DataToEmployeeDSConverterTest {
 
 	@Test
 	public void test() {
-		Data input = new Data("", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "");
+		Data input = new Data();
+		input.setCategoria("");
+		input.setCtacte("");
+		input.setDireccion("");
+		input.setDni("");
+		input.setEmail("");
+		input.setEstadocivil("");
+		input.setFecalta("");
+		input.setFecbaja("");
+		input.setFecnac("");
+		input.setId("");
+		input.setName("");
+		input.setNsegsoc("");
+		input.setNumtel("");
+		input.setRefCatastro("");
+		input.setSalary("");
+		input.setSexo("");
+		input.setTipocontrato("");
 		EmployeeDS output = new DataToEmployeeDSConverter().convert(input);
 		assertThat(output).isNotNull();
     	assertThat(output.getName()).isEqualTo("");

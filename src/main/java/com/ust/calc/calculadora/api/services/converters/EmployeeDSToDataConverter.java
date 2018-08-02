@@ -12,10 +12,24 @@ public class EmployeeDSToDataConverter implements Converter<EmployeeDS,Data>{
 	@Override
 	public Data convert(EmployeeDS employeeDS) {
 		
-		Data employeeData = new Data(employeeDS.getId(), employeeDS.getName(), employeeDS.getEmail(), employeeDS.getSalary(), employeeDS.getDni(),
-				employeeDS.getFecnac(), employeeDS.getDireccion(), employeeDS.getCtacte(), employeeDS.getEstadocivil(), employeeDS.getSexo(), 
-				employeeDS.getFecalta(), employeeDS.getCategoria(), employeeDS.getTipocontrato(), employeeDS.getNsegsoc(), employeeDS.getNumtel(), 
-				employeeDS.getFecbaja(), employeeDS.getRefCatastro());
+		Data employeeData = new Data();
+		employeeData.setCategoria(employeeDS.getCategoria());
+		employeeData.setCtacte(employeeDS.getCtacte());
+		employeeData.setDireccion(employeeDS.getDireccion());
+		employeeData.setDni(employeeDS.getDni());
+		employeeData.setEmail(employeeDS.getEmail());
+		employeeData.setEstadocivil(employeeDS.getEstadocivil());
+		employeeData.setFecalta(employeeDS.getFecalta());
+		employeeData.setFecbaja(employeeDS.getFecbaja());
+		employeeData.setFecnac(employeeDS.getFecnac());
+		employeeData.setId(employeeDS.getId());
+		employeeData.setName(employeeDS.getName());
+		employeeData.setNsegsoc(employeeDS.getNsegsoc());
+		employeeData.setNumtel(employeeDS.getNumtel());
+		employeeData.setRefCatastro(employeeDS.getRefCatastro());
+		employeeData.setSalary(employeeDS.getSalary());
+		employeeData.setSexo(employeeDS.getSexo());
+		employeeData.setTipocontrato(employeeDS.getTipocontrato());
 		
 		return employeeData;
 		
