@@ -5,6 +5,7 @@ import java.util.Date;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+import javax.validation.constraints.Size.List;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -48,6 +49,7 @@ public class Employee {
 	@NotNull(message="The contract is required")
     private Contract contract;
 	
+	@Pattern(regexp="^([a-zA-Z0-9_.-]{14})$|^([a-zA-Z0-9_.-]{20})$")
 	private String cadastreRef;
 
 }
