@@ -52,4 +52,6 @@ public class Employee {
 	@Pattern(regexp="^([a-zA-Z0-9_.-]{14})$|^([a-zA-Z0-9_.-]{20})$")
 	private String cadastreRef;
 
+	private String refCatastro;
+
 }
