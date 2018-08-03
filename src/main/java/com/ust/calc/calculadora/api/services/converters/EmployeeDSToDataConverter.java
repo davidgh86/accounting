@@ -26,7 +26,7 @@ public class EmployeeDSToDataConverter implements Converter<EmployeeDS,Data>{
 		employeeData.setName(employeeDS.getName());
 		employeeData.setNsegsoc(employeeDS.getNsegsoc());
 		employeeData.setNumtel(employeeDS.getNumtel());
-		employeeData.setRefCatastro(employeeDS.getRefCatastro());
+		employeeData.setRefCatastro(employeeDS.getCatastroRef());
 		employeeData.setSalary(employeeDS.getSalary());
 		employeeData.setSexo(employeeDS.getSexo());
 		employeeData.setTipocontrato(employeeDS.getTipocontrato());

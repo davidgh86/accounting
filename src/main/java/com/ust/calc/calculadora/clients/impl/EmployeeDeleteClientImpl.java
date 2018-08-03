@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
 
 import com.ust.calc.calculadora.clients.DataSourceWSClientModifications;
 import com.ust.calc.calculadora.clients.EmployeeDeleteClient;
-import com.ust.datasource.api.DataOperation;
 
 @Component
 public class EmployeeDeleteClientImpl implements EmployeeDeleteClient {

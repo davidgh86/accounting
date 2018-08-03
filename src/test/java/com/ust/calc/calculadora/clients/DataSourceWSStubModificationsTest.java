@@ -13,7 +13,6 @@ import org.mockito.runners.MockitoJUnitRunner;
 
 import com.ust.calc.calculadora.wsdlstub.Data;
 import com.ust.calc.calculadora.wsdlstub.UpdateResponse;
-import com.ust.datasource.api.DataOperation;
 
 @RunWith(MockitoJUnitRunner.class)
 public class DataSourceWSStubModificationsTest {
@@ -23,8 +22,6 @@ public class DataSourceWSStubModificationsTest {
 	@Mock
 	private DataSourceWSStubModifications dataSource;
 	
-	@Mock
-	DataOperation dataOperation;
 	
 	@Before
 	public void setUp() {
