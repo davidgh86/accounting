@@ -48,7 +48,7 @@ public class Employee {
 	@NotNull(message="The contract is required")
     private Contract contract;
 	
-	@Pattern(regexp="^([a-zA-Z0-9_.-]{14})$|^([a-zA-Z0-9_.-]{20})$")
+	@Pattern(regexp="^([a-zA-Z0-9_.-]{14})$|^([a-zA-Z0-9_.-]{20})$", message="cadastreRef size must be 14 or 20 characters")
 	private String cadastreRef;
 
 }
