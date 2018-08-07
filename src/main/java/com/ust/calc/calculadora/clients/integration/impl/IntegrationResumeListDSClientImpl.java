@@ -38,7 +38,6 @@ public class IntegrationResumeListDSClientImpl implements IntegrationResumeListD
 				String name = (String)lhm.get("name");
 				String email = (String)lhm.get("email");
 				String salary = (String)lhm.get("salary");
-				String currency = (String)lhm.get("currency");
 				String dni = (String)lhm.get("dni");
 				String fecnac = (String)lhm.get("fecnac");
 				String direccion = (String)lhm.get("direccion");
@@ -53,7 +52,7 @@ public class IntegrationResumeListDSClientImpl implements IntegrationResumeListD
 				String fecbaja = (String)lhm.get("fecbaja");
 				String refCatastro = (String)lhm.get("refCatastro");
 				
-				EmployeeDS employeeDS= new EmployeeDS(id, name, email, salary, currency, dni, fecnac, direccion, ctacte, estadocivil, sexo, fecalta, categoria, tipocontrato, nsegsoc, numtel, fecbaja, refCatastro);
+				EmployeeDS employeeDS= new EmployeeDS(id, name, email, salary, dni, fecnac, direccion, ctacte, estadocivil, sexo, fecalta, categoria, tipocontrato, nsegsoc, numtel, fecbaja, refCatastro);
 				salida.add(employeeDS);
 			}
 		}

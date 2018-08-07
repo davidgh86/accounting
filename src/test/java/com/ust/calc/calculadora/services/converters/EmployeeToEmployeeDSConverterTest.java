@@ -19,7 +19,7 @@ public class EmployeeToEmployeeDSConverterTest {
 	@Test
     public void testConverter() {
 		
-		Employee input = new Employee("","","","",Calendar.getInstance().getTime(),"","","",new Contract("", "", "","","", "","","",""), "");
+		Employee input = new Employee("","","","",Calendar.getInstance().getTime(),"","","",new Contract("", "","","", "","","",""), "");
 		EmployeeDS output = new EmployeeToEmployeeDSConverter().convert(input);
     	assertThat(output).isNotNull();
     	assertThat(output.getName()).isEqualTo("");

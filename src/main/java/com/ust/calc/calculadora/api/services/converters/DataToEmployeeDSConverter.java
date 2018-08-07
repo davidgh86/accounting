@@ -11,8 +11,8 @@ public class DataToEmployeeDSConverter implements Converter<Data, EmployeeDS> {
 
 	@Override
 	public EmployeeDS convert(Data data) {
-		//TODO falta añadir al data el campo currency
-		EmployeeDS employeeDS = new EmployeeDS(data.getId(), data.getName(), data.getEmail(), data.getSalary(), "",
+		
+		EmployeeDS employeeDS = new EmployeeDS(data.getId(), data.getName(), data.getEmail(), data.getSalary(), 
 				data.getDni(), data.getFecnac(), data.getDireccion(),
 				data.getCtacte(), data.getEstadocivil(), data.getSexo(),
 				data.getFecalta(), data.getCategoria(),
