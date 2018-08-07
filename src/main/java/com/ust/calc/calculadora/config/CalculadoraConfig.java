@@ -1,13 +1,10 @@
 package com.ust.calc.calculadora.config;
 
+import java.text.SimpleDateFormat;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
-
-import springfox.documentation.builders.PathSelectors;
-import springfox.documentation.builders.RequestHandlerSelectors;
-import springfox.documentation.spi.DocumentationType;
-import springfox.documentation.spring.web.plugins.Docket;
 
 @Configuration
 public class CalculadoraConfig {
@@ -17,6 +14,10 @@ public class CalculadoraConfig {
 		return new RestTemplate(); 
    }
 	
-	
+	@Bean
+	public SimpleDateFormat dateFormat() {
+		return new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
+		
+	}
 
 }

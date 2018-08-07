@@ -1,5 +1,10 @@
 package com.ust.calc.calculadora.services.converters;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 
@@ -15,7 +20,14 @@ public class EmployeeDSToEmployeeConverter implements Converter<EmployeeDS, Empl
 	public Employee convert(EmployeeDS employeeDS) {
 		
 		Contract contract = new Contract(employeeDS.getCategoria(),employeeDS.getTipocontrato(),employeeDS.getFecalta(),employeeDS.getSalary(),employeeDS.getCurrency(),employeeDS.getFecbaja(),employeeDS.getNsegsoc(),employeeDS.getEstadocivil(),employeeDS.getCtacte());
-		Employee employee = new Employee(employeeDS.getName(),employeeDS.getDireccion(),employeeDS.getEmail(),employeeDS.getDni(),null,employeeDS.getNumtel(),employeeDS.getSexo(),employeeDS.getId(),contract,employeeDS.getCatastroRef());
+		Date fecNac = null;
+		try {
+			final SimpleDateFormat dsDateFormat = new SimpleDateFormat("EEE MMM dd HH:mm:ss zzz yyyy",Locale.ENGLISH);			
+			fecNac = (Date) dsDateFormat.parse(employeeDS.getFecnac());
+		}catch(ParseException ex) {
+			
+		}
+		Employee employee = new Employee(employeeDS.getName(),employeeDS.getDireccion(),employeeDS.getEmail(),employeeDS.getDni(),fecNac,employeeDS.getNumtel(),employeeDS.getSexo(),employeeDS.getId(),contract,employeeDS.getCatastroRef());
 		
 		return employee;
 	}

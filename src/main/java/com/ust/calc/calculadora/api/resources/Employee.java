@@ -7,6 +7,9 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.ust.calc.calculadora.util.JsonDateSerializer;
+
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -48,7 +51,8 @@ public class Employee {
 	
 	@NotNull(message="The user date of birth is required")
 	@ApiModelProperty(required=true)
-    private Date birthDate;
+	@JsonSerialize(using=JsonDateSerializer.class)
+	private Date birthDate;
     private String phoneNumber;
     private String sex;
     private String id;
